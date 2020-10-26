@@ -12,30 +12,46 @@ name = "/lol/summoner/v4/summoners/by-name/"
 account = "/lol/match/v4/matchlists/by-account/"
 game = "/lol/match/v4/matches/"
 spec = [name, account, game]
-summoner = "vickus2"
+summoner = "Kimchi Poppy Off"
+col = ["matchID", 'total kills', 'total deaths', 'total assists', 'Damage Dealt', "Damage Taken", "Time CC'ed", 'Total Gold Earned', 'First Blood Turret', '#Assassins', '#Fighters', "#Mages", "#Marksman", "#Supports", "#Tanks", "WIN/LOSS?"]
 
 x= league_data.fetch(spec[0], summoner)
 accountID = x['accountId'] 
 
+dd = pd.read_csv(r"C:\Users\Victor\.spyder-py3\Match_history.csv")
 
 x = league_data.fetch(spec[1], accountID)
  
 m = x['matches']
 matches = []
+count = 0
+df = pd.DataFrame(columns=col)
 
 for i in m:
     g = i['gameId']
     g = str(g)
     matches.append(g)
     
+for n in matches:
 
-x = league_data.fetch(spec[2], matches[0])
+    x = league_data.fetch(spec[2], n)
+        
+    w, l = league_data.match_info(x)
+    
+    if len(w) == 0 and len(l) == 0:
+        pass
+    else:
+        w[0] = matches[0]+'W'
+        l[0] = matches[0]+'L' 
+        w.append('WIN')
+        l.append('LOSS')
+        
+        if w[0] in dd:
+            pass
+        else:
+            df.loc[count] = w
+            df.loc[count+1] = l
+            count += 2
 
-w, l = league_data.match_info(x)
-w.pop(0)
-l.pop(0)
-
-df = pd.DataFrame(columns=['total kills', 'total deaths', 'total assists', 'Damage Dealt', "Damage Taken", "Time CC'ed", 'Total Gold Earned', 'First Blood Turret', '#Assassins', '#Fighters', "#Mages", "#Marksman", "#Supports", "#Tanks"])
-
-df.loc[0] = w
-df.loc[1] = l
+#df.to_csv(r"C:\Users\Victor\.spyder-py3\Match_history.csv")
+#df.to_csv(r"C:\Users\Victor\.spyder-py3\Match_history.csv", mode='a', header=False)
