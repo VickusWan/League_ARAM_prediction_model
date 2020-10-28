@@ -10,7 +10,14 @@ Since the champions of each players are randomly selected, the goal of this data
 - Team deaths
 - Total Damage Dealt
 - Total Damage Taken
-- Total Time CC'ed
+- Total Time CC'ed (how long is the champion stunned/unable to move)
 - Total Gold Earned
 - First turret
 - Champion Tag
+
+## Data Scrapping/Collection
+Since there were no available dataset on the specific hypothesis, the data had to be collected through the RIOT developed API (https://developer.riotgames.com/apis) (note: users need a personal API key in order to access the API). The steps to obtain the dataset were:
+1. Obtain a summoner's encrypted ID, which can be found using a summoner's name.
+2. Using the summoner's encrypted ID, obtain the match history for the past 100 games.
+3. Obtain each match's ID and filter out games that are ARAM game modes only.
+4. Using the matchID, extract the information mentioned above.
