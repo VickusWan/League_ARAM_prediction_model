@@ -2,7 +2,10 @@
 
 # League_ARAM_prediction_model
 
-Based on match history of personal accounts, try to predict the percentage of winning based on several factors like:
+League of Legends is team-based game where players form a team of five and assume the role of a champion, characters with unique abilities, generally varying around a type of class, and battle against another team of five players. ARAM (all random, all mid) is a game mode where the champions are randomly selected (rather than picked).
+
+## Goal/Hypothesis
+Since the champions of each players are randomly selected, the goal of this data analysis is to find whether certain parameters affected the winning rate of games. Several factors that are included in the data set are: 
 - Team kills
 - Team deaths
 - Total Damage Dealt
