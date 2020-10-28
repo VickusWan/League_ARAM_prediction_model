@@ -21,3 +21,7 @@ Since there were no available dataset on the specific hypothesis, the data had t
 2. Using the summoner's encrypted ID, obtain the match history for the past 100 games.
 3. Obtain each match's ID and filter out games that are ARAM game modes only.
 4. Using the matchID, extract the information mentioned above.
+
+The final dataset contains approximately 2000 points, which is found under (Match_history.csv) https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/Match_history.csv
+
+## Exploratory Data Analysis (EDA)
