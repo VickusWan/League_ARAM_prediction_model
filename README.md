@@ -44,4 +44,20 @@ Finally, an original conclusion was that certain champion classes were more effe
 
 AS shown, it can be seen that the blue team (winning team) has a greater average mages and tanks in their team composition, while the red team (losing team) carries a team composition with more assassins and fighters. All other classes seem to have the same disparity.
 
+## Data Modelling
 
+Having a cleaned up dataset, the next step would be to use Machine Learning Algorithms to predict if a team would win based on the listed factors. 
+
+The first step would be to numerize the label WIN/LOSS. In this case, the WIN would be equivalent to "1" and the LOSS would be represented by "0". Afterwards, we drop the "MatchID" feature since it does not provide any effect on the final score. 
+
+For this dataset, both the Naives-Bayes and the K-Nearest Neighbours were used as Machine Learning Algorithms. 
+
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/setup.png)
+
+Using the sci-kit module, the F1 prediction score of the K-Nearest Neighbours was found to be,
+
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/KN.png)
+
+Finally, the F1 prediction score of Naive Bayes was found to be,
+
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/NB.png)
