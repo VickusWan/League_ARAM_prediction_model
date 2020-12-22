@@ -61,3 +61,7 @@ Using the sci-kit module, the F1 prediction score of the K-Nearest Neighbours wa
 Finally, the F1 prediction score of Naive Bayes was found to be,
 
 ![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/main/images/NB.PNG)
+
+## Conclusion
+
+Thus, with certain parameters before-game (champion classes), and during game factors (kills, death, gold, damage), we can use the Naives Bayes algorithms to predict whether a team will win or lose, with a F1 score of 78%.
