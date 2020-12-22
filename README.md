@@ -26,6 +26,22 @@ The final dataset contains approximately 2000 points, which is found under (Matc
 
 ## Exploratory Data Analysis (EDA)
 
-After the data is cleaned up, parameters were visualized against each other to find trends or patterns.
+After the data is cleaned up, parameters were visualized against each other to find trends or patterns. Below is a histogram for the total damage dealt, damage taken and total gold earned for each individual games. The blue color represents the winning team, and the red, for the losing team.
 
 ![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/damage.png)
+
+For the damage dealt, the blue team apepars to be slightly more skewed to the right. For the damage taken, the blue team appears to have a higher frequency in the lower portion of the bin ranges. Finally, the blue team seems to have a trend that is more skewed to the red, compared to the red team.
+
+Next, we have the kill-death-assist ratio for each team, 
+
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/kda.png)
+
+As shown, it can be seen that the blue team (winning team) has a greater assist score for a lower death. On the other hand, the orange team (losing team) has a greater death to assist ratio.
+
+Finally, an original conclusion was that certain champion classes were more effective in the ARAM gameplay. For example, it is hypothesized that mages were better performers than supports.
+
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/dist.png)
+
+AS shown, it can be seen that the blue team (winning team) has a greater average mages and tanks in their team composition, while the red team (losing team) carries a team composition with more assassins and fighters. All other classes seem to have the same disparity.
+
+
