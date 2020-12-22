@@ -52,12 +52,12 @@ The first step would be to numerize the label WIN/LOSS. In this case, the WIN wo
 
 For this dataset, both the Naives-Bayes and the K-Nearest Neighbours were used as Machine Learning Algorithms. 
 
-![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/setup.PNG)
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/main/images/setup.PNG)
 
 Using the sci-kit module, the F1 prediction score of the K-Nearest Neighbours was found to be,
 
-![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/KN.PNG)
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/main/images/KN.PNG)
 
 Finally, the F1 prediction score of Naive Bayes was found to be,
 
-![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/NB.PNG)
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/main/images/NB.PNG)
