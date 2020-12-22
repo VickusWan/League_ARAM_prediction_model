@@ -25,3 +25,7 @@ Since there were no available dataset on the specific hypothesis, the data had t
 The final dataset contains approximately 2000 points, which is found under (Match_history.csv) https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/Match_history.csv
 
 ## Exploratory Data Analysis (EDA)
+
+After the data is cleaned up, parameters were visualized against each other to find trends or patterns.
+
+![](https://github.com/VickusWan/League_ARAM_prediction_model/blob/EDA/images/damage.png)
